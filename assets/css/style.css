@@ -1,0 +1,31 @@
+/* HEADER STYLES */
+header#page-header{
+	height: 500px;
+	background: #cecece;
+}
+header#page-header > div.row{
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%); 
+
+}
+section#page-content, section#page-content > #services{
+	padding-top: 3em;
+}
+section#page-content{
+	padding-bottom: 3em;
+}
+footer#page-footer{
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	border-top: 1px solid #cecece;
+}
+
+.h1{
+  color: #FFF;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 0.5rem; }
+}
