@@ -29,3 +29,14 @@ footer#page-footer{
   margin-top: 0;
   margin-bottom: 0.5rem; }
 }
+#remove{
+   border: 1px solid black;
+   -webkit-appearance: none;
+
+}
+ul li.checked{
+	background: #888;
+	color: #FFF;
+	text-decoration: line-through;
+
+}

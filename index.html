@@ -7,7 +7,6 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="assets/css/foundation.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700|Josefin+Sans:300" rel="stylesheet">
 </head>
 <body>
 <div class="row">
@@ -16,13 +15,13 @@
 	</div>
 	<div class="row">
 		<div class="small-12 columns">
-			<form>
 				<label>TODO</label>
-				<input type="text" placeholder="What's today task?" id="text">
-				<input type="submit" class="success button" value="Add Todo">
-			</form>
-
-
+				<input type="text" placeholder="What's today task?" id="task" required>
+				<input type="submit" class="success button" value="Add Todo" id="add">
+			<ul>
+			<div id="todos"></div>
+             </ul>
+<script src="assets/js/script.js"></script>
 
 </body>
 </html>
