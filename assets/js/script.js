@@ -11,10 +11,15 @@ function get_todos(){
    return todos;
 }
  function add(){
- 	var task = document.getElementById('task').value;
-      
+     var d= new Date();
+    d = d.toDateString(); 
+ 	var task = {
+        time: d,
+        description: document.getElementById('task').value
+    }
     var todos = get_todos();
-    todos.push(task);
+    todos.push(task.time);
+    todos.push(task.description);
     localStorage.setItem('todo', JSON.stringify(todos));
     document.getElementById('task').value='';
 
@@ -25,12 +30,10 @@ function get_todos(){
 
  function show(){
  	var todos = get_todos();
-    var d= new Date();
-    d= d.toDateString();
-
+    
     var html='<ul>';
     for(var i=0; i<todos.length; i++){
-    	html += '<li>' + todos[i] + ',' + d + '<button class="remove" id="' + i + '">x</button></li>';
+    	html += '<li>' + todos[i] + '<button class="remove" id="' + i + '">x</button></li>';
     };
     html += '</ul>';
     document.getElementById('todos').innerHTML =html;
@@ -38,14 +41,15 @@ function get_todos(){
     for(var i=0; i<buttons.length; i++){
     	buttons[i].addEventListener('click', remove);
     };
- }
-// Add a "checked" symbol when clicking on a list item
-var list= document.querySelector('ul');
+}
+    var list= document.querySelector('ul');
 list.addEventListener('click', function(ev){
-	if(ev.target.tagName ==='LI'){
-		ev.target.classList.toggle('checked');
-	}
+    if(ev.target.tagName ==='LI'){
+        ev.target.classList.toggle('checked');
+    }
 }, false); 
+
+
 
  function remove(){
  	var id = this.getAttribute('id');
