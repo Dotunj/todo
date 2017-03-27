@@ -16,6 +16,7 @@ function get_todos(){
     var todos = get_todos();
     todos.push(task);
     localStorage.setItem('todo', JSON.stringify(todos));
+    document.getElementById('task').value='';
 
     show();
 

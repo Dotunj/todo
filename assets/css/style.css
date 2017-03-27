@@ -38,9 +38,4 @@ ul li.checked{
 	background: #888;
 	color: #FFF;
 	text-decoration: line-through;
-	width: 20%;
-
-}
-#todos{
-	border: 1px solid black;
-}
+	width: 100%;
