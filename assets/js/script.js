@@ -25,10 +25,12 @@ function get_todos(){
 
  function show(){
  	var todos = get_todos();
+    var d= new Date();
+    d= d.toDateString();
 
     var html='<ul>';
     for(var i=0; i<todos.length; i++){
-    	html += '<li>' + todos[i] + '<button class="remove" id="' + i + '">x</button></li>';
+    	html += '<li>' + todos[i] + ',' + d + '<button class="remove" id="' + i + '">x</button></li>';
     };
     html += '</ul>';
     document.getElementById('todos').innerHTML =html;
